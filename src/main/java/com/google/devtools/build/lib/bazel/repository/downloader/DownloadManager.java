@@ -102,7 +102,7 @@ public class DownloadManager {
     }
 
     List<URL> rewrittenUrls = originalUrls;
-    Map<URI, Map<String, String>> rewrittenAuthHeaders = ImmutableMap.copyOf(authHeaders);
+    Map<URI, Map<String, String>> rewrittenAuthHeaders = authHeaders;
 
     if (rewriter != null) {
       rewrittenUrls = rewriter.amend(originalUrls);
